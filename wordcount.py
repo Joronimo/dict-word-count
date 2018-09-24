@@ -1,7 +1,8 @@
-#open file
+import sys
 
 
 def word_count(file):
+
     file = open(file) # blob of file
 
     dict_word_count = {}
@@ -18,4 +19,6 @@ def word_count(file):
             dict_word_count[word] = dict_word_count.get(word, 0) + 1
 
     return dict_word_count
-print(word_count('test.txt'))
+
+print(word_count(sys.argv[1]))
+# word_count(sys.argv)
