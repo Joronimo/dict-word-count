@@ -3,11 +3,12 @@
 
 def word_count(file):
     file = open(file)
-    
+
     dict_word_count = {}
 
     for line in file:
-        row = line.split()
+        lines = line.lower()
+        row = lines.split(',')
 
         for word in row:
             dict_word_count[word] = dict_word_count.get(word, 0) + 1
